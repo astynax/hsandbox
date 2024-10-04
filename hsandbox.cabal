@@ -1,0 +1,22 @@
+cabal-version:      3.0
+name:               hsandbox
+version:            0.1.0.0
+build-type:         Simple
+
+common warnings
+    ghc-options: -Wall
+
+executable scaffold
+    import:           warnings
+    default-language: GHC2024
+    build-depends:    base ^>=4.20.0.0
+    hs-source-dirs:   app
+    main-is:          Main.hs
+
+library
+    import:           warnings
+    build-depends:    base ^>=4.20.0.0
+    hs-source-dirs:   src
+    default-language: GHC2024
+    exposed-modules:  Sandbox
+    other-modules:    Example
